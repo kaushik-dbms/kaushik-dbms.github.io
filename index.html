@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>19BAI1052</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">19BAI1052</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">DDL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">DML</a>
+          </li>
+          <!-- <li class="nav-item"> -->
+          <!--   <a class="nav-link js-scroll-trigger" href="#contact">Contact</a> -->
+          <!-- </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>DDL and DML Tutorial</h1>
+      <p class="lead">in 15 minutes or less</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>DDL</h2>
+          <h4>
+          <p class="lead">DDL is short for <u><b>D</b></u>ata <u><b>D</b></u>efinition <u><b>L</b></u>anguage, which deals with database schemas and descriptions, of how the data should reside in the database. In simpler words it is used to build and modify the structure of your tables and other objects in the database. DDL commands are as follows,</p>
+          <ul class="lead">
+              <li>
+                  <b>CREATE</b><span class="text-muted"> command is used for creating entities in the database.<br>
+                      It simply creates a new table.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        CREATE TABLE &lt;table_name&gt;
+                        (    column_name1 datatype,
+                             column_name2 datatype,
+                             .
+                             .
+                             .
+                             column_name_n datatype
+                        );
+                      </code>
+                      </pre>
+                  </span>
+            </li>
+            <li>
+                <b>DROP</b><span class="text-muted"> command is used for deleting entire database objects from the database.<br>
+                      It can delete a table, index, or view.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        DROP TABLE &lt;table_name&gt;;
+                        OR
+                        DROP DATABASE &lt;database_name&gt;;
+                      </code>
+                      </pre>
+                      <b>However</b>, If you want to remove individual records, then use DELETE command that will be further in this tutorial.
+                </span>
+            </li>
+            <br>
+            <br>
+            <li>
+                <b>ALTER</b><span class="text-muted"> command is used for altering or modifying the structure of the database.<br>
+                     It only can modifies an existing database object. In other words using this command, you can add additional column, drop existing column and even change the data type of columns.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        ALTER TABLE &lt;table_name&gt;
+                        ADD &lt;column_name datatype&gt;;
+
+                        OR
+
+                        ALTER TABLE &lt;table_name&gt;
+                        CHANGE &lt;old_column_name&gt; &lt;new_column_name>;
+
+                        OR
+
+                        ALTER TABLE &lt;table_name&gt;
+                        DROP COLUMN &lt;column_name&gt;;
+                      </code>
+                      </pre>
+                      To view the changed structure of table, use 'DESCRIBE' command.<br>
+                      <pre>
+                      <code>
+                        DESCRIBE TABLE employee;
+                      </code>
+                      </pre>
+                </span>
+            </li>
+            <li>
+                <b>RENAME</b><span class="text-muted"> command is used to rename an object.<br>
+                    It just renames a database table.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        RENAME TABLE &lt;old_name&gt; TO &lt;new_name&gt;;
+                      </code>
+                      </pre>
+            </li>
+            <li>
+                <b>TRUNCATE</b><span class="text-muted"> command is used to delete all the rows from the table permanently.<br>
+                    It removes all the records from a table, including all spaces allocated for the records.
+                    This command is same as DELETE command, but TRUNCATE command does not generate any rollback data.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        TRUNCATE TABLE &lt;table_name&gt;;
+                      </code>
+                      </pre>
+                  </span>
+            </li>
+          </ul>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>DML</h2>
+          <h4>
+          <p class="lead">DML stands for <b><u>D</u></b>ata <u><b>M</b></u>anipulation <u><b>L</b></u>anguage and it deals with data manipulation. It includes the most common SQL statements such as SELECT, INSERT, UPDATE and DELETE all of which are used to manipulate or retrieve data in a database.</p>
+          <ul class="lead">
+              <li>
+                  <b>SELECT</b><span class="text-muted"> command is used to retrieve data from the database.<br>
+                      It returns a result set of records from one or more tables.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        SELECT * FROM &lt;table_name&gt;;
+                      </code>
+                      </pre>
+                  </span>
+              </li>
+              <li>
+                  <b>UPDATE</b><span class="text-muted"> command is used to modify the records present in existing table.<br>
+                      This command updates existing data within a table.
+                      It changes the data of one or more records in a table.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        UPDATE &lt;table_name&gt;
+                        SET &lt;column_name = value&gt;
+                        WHERE &lt;condition&gt;;
+                      </code>
+                      </pre>
+                  </span>
+              </li>
+              <li>
+                  <b>INSERT</b><span class="text-muted"> command is used for inserting a data into a table.<br>
+                      Using this command, you can add one or more records to any single table in a database.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                         INSERT INTO &lt;table_name&gt; (
+                         `column_name1` &lt;datatype&gt;, 
+                         `column_name2` &lt;datatype&gt;, 
+                         . . . , 
+                         `column_name_n` &lt;database&gt;) 
+                     VALUES (`value1`,`value2`,...,`value n`);
+                      </code>
+                      </pre>
+                  </span>
+              </li>
+              <li>
+                  <b>DELETE</b><span class="text-muted"> command is used to delete some or all records from the existing table.<br>
+                      <b>Syntax :</b><br>
+                      <pre>
+                      <code>
+                        DELETE FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                      </code>
+                      </pre>
+                  </span>
+              </li>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">"It does not matter how slowly you go as long as you do not stop."&emsp; -Confuscius</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
