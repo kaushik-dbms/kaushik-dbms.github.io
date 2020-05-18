@@ -64,16 +64,17 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        CREATE TABLE &lt;table_name&gt;
-                        (    column_name1 datatype,
-                             column_name2 datatype,
-                             .
-                             .
-                             .
-                             column_name_n datatype
-                        );
+CREATE TABLE &lt;table_name&gt;
+(    column_name1 datatype,
+     column_name2 datatype,
+     .
+     .
+     .
+     column_name_n datatype
+);
                       </code>
                       </pre>
+                      </p>
                   </span>
             </li>
             <li>
@@ -82,9 +83,9 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        DROP TABLE &lt;table_name&gt;;
-                        OR
-                        DROP DATABASE &lt;database_name&gt;;
+DROP TABLE &lt;table_name&gt;;
+OR
+DROP DATABASE &lt;database_name&gt;;
                       </code>
                       </pre>
                       <b>However</b>, If you want to remove individual records, then use DELETE command that will be further in this tutorial.
@@ -98,24 +99,24 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        ALTER TABLE &lt;table_name&gt;
-                        ADD &lt;column_name datatype&gt;;
+ALTER TABLE &lt;table_name&gt;
+ADD &lt;column_name datatype&gt;;
 
-                        OR
+OR
 
-                        ALTER TABLE &lt;table_name&gt;
-                        CHANGE &lt;old_column_name&gt; &lt;new_column_name>;
+ALTER TABLE &lt;table_name&gt;
+CHANGE &lt;old_column_name&gt; &lt;new_column_name>;
 
-                        OR
+OR
 
-                        ALTER TABLE &lt;table_name&gt;
-                        DROP COLUMN &lt;column_name&gt;;
+ALTER TABLE &lt;table_name&gt;
+DROP COLUMN &lt;column_name&gt;;
                       </code>
                       </pre>
                       To view the changed structure of table, use 'DESCRIBE' command.<br>
                       <pre>
                       <code>
-                        DESCRIBE TABLE employee;
+DESCRIBE TABLE employee;
                       </code>
                       </pre>
                 </span>
@@ -126,7 +127,7 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        RENAME TABLE &lt;old_name&gt; TO &lt;new_name&gt;;
+RENAME TABLE &lt;old_name&gt; TO &lt;new_name&gt;;
                       </code>
                       </pre>
             </li>
@@ -137,7 +138,7 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        TRUNCATE TABLE &lt;table_name&gt;;
+TRUNCATE TABLE &lt;table_name&gt;;
                       </code>
                       </pre>
                   </span>
@@ -163,7 +164,7 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        SELECT * FROM &lt;table_name&gt;;
+SELECT * FROM &lt;table_name&gt;;
                       </code>
                       </pre>
                   </span>
@@ -175,9 +176,9 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                        UPDATE &lt;table_name&gt;
-                        SET &lt;column_name = value&gt;
-                        WHERE &lt;condition&gt;;
+UPDATE &lt;table_name&gt;
+SET &lt;column_name = value&gt;
+WHERE &lt;condition&gt;;
                       </code>
                       </pre>
                   </span>
@@ -188,12 +189,12 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                         INSERT INTO &lt;table_name&gt; (
-                         `column_name1` &lt;datatype&gt;, 
-                         `column_name2` &lt;datatype&gt;, 
-                         . . . , 
-                         `column_name_n` &lt;database&gt;) 
-                     VALUES (`value1`,`value2`,...,`value n`);
+INSERT INTO &lt;table_name&gt; (
+`column_name1` &lt;datatype&gt;, 
+`column_name2` &lt;datatype&gt;, 
+. . . , 
+`column_name_n` &lt;database&gt;) 
+VALUES (`value1`,`value2`,...,`value n`);
                       </code>
                       </pre>
                   </span>
@@ -203,7 +204,7 @@
                       <b>Syntax :</b><br>
                       <pre>
                       <code>
-                      DELETE FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+DELETE FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
                       </code>
                       </pre>
                   </span>
